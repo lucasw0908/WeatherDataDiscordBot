@@ -28,7 +28,7 @@ def save_plot_data(data: dict[str:list[Any]], title: str="No Title", xlabel: str
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%m/%d:%H"))
     
     if not gif:
-        ax.plot_date(mdates.date2num(data["X"]), data["Y"])
+        ax.plot_date(mdates.date2num(data["X"]), data["Y"], fmt="ro", xdate=True)
         fig.savefig("data.png")
         
     else:
