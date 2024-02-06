@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 import logging
-import os
 from time import strptime, mktime
 from datetime import datetime
 
@@ -16,7 +15,7 @@ class GetData(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    @commands.slash_command(name="天氣資訊", description="取得當前天氣資訊(只支援台北)")
+    @commands.slash_command(name="天氣資訊", description="取得當前天氣資訊")
     async def get_weather_data(self, ctx: discord.ApplicationContext, 
                                城市: discord.Option(str, autocomplete=discord.utils.basic_autocomplete(city_choice)), 
                                地區: discord.Option(str, autocomplete=discord.utils.basic_autocomplete(location_choice)), 

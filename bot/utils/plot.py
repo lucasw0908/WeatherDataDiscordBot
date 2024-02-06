@@ -51,7 +51,7 @@ def save_plot_data(data: dict[str:list[Any]], title: str="No Title", xlabel: str
         
         ani = animation.FuncAnimation(fig, run, frames=len(data["X"]), interval=30, repeat=False)
         
-        ani.save("data.gif", writer="PillowWriter", fps=10)
+        ani.save("data.gif", writer="pillow", fps=10)
         
     plt.close()
     plt.clf()

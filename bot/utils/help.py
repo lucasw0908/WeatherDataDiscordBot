@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 from .embed import EmbedMaker
-from .data import prefix_commands_description
+from .description import prefix_commands_description
 
 
 gl_command_list = None

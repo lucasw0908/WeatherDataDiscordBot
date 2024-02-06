@@ -69,4 +69,4 @@ class DiscordBotSync(commands.Bot):
 bot = DiscordBotSync("?")
     
 if __name__ == "__main__":
-    bot.run(debug=True)
+    bot.run()
