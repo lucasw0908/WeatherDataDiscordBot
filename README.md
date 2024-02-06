@@ -11,7 +11,7 @@
 
 **請事先安裝好[python3](https://www.python.org/)**
 
-* **打開[run.bat](https://github.com/lucasw0908/WeatherDataDiscordBot/run.bat)**
+* **打開run.bat**
 * **輸入"y"安裝pip packages**
 * **輸入"y"輸入您的bot token**
 * **成功開始執行!**
