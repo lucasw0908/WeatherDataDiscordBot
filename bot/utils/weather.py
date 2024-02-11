@@ -84,7 +84,7 @@ def data_type_choice(ctx: discord.AutocompleteContext) -> list | None:
         
     return data_type_list
 
-def description_to_elementname(element_description: str) -> dict | None:
+def description_to_elementname(element_description: str) -> str | None:
     
     if element_description not in description_to_elementname_dict:
         log.error("Variable: description_to_elementname_dict was not found.")

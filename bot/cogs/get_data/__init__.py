@@ -17,15 +17,12 @@ class GetData(commands.Cog):
 
     @commands.slash_command(name="天氣資訊", description="取得當前天氣資訊")
     async def get_weather_data(self, ctx: discord.ApplicationContext, 
-                               城市: discord.Option(str, autocomplete=discord.utils.basic_autocomplete(city_choice)), 
-                               地區: discord.Option(str, autocomplete=discord.utils.basic_autocomplete(location_choice)), 
-                               資料類型: discord.Option(str, autocomplete=discord.utils.basic_autocomplete(data_type_choice)), 
-                               動態資料: discord.Option(bool)
+                               city: discord.Option(str, name="城市", autocomplete=discord.utils.basic_autocomplete(city_choice)), 
+                               location: discord.Option(str, name="地區", autocomplete=discord.utils.basic_autocomplete(location_choice)), 
+                               data_type: discord.Option(str, name="資料類型", autocomplete=discord.utils.basic_autocomplete(data_type_choice)), 
+                               animated: discord.Option(bool, name="動態資料")
                                ):
         
-        animated = 動態資料
-        location = 地區
-        data_type = 資料類型
         weather_data = get_weather_data(location_name=location)
         data = {}
         data["X"] = []
