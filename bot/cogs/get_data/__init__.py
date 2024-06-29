@@ -35,7 +35,7 @@ class GetData(commands.Cog):
             
             try: 
                 y = int(time_data["elementValue"][0]["value"])
-            except:
+            except KeyError:
                 await ctx.respond(embed=EmbedMaker(status=False, description="選取了無效的資料類型"))
                 return
             
